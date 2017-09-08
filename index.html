@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NexHex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        -webkit-app-region: drag;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .colors {
+        display: flex;
+      }
+
+      .color {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .color__preview {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
+
+      .color__input {
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 25px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .color:not(:last-child) {
+        margin-right: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colors">
+      <div class="color">
+        <div class="color__preview" id="colorPreviewDarker"></div>
+      </div>
+      <div class="color">
+        <div class="color__preview" id="colorPreviewFrom"></div>
+        <input class="color__input" />
+      </div>
+      <div class="color">
+        <div class="color__preview" id="colorPreviewTo"></div>
+        <input class="color__input" />
+      </div>
+      <div class="color">
+        <div class="color__preview" id="colorPreviewLighter"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    require('./renderer.js')
+  </script>
+</html>
